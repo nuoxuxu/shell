@@ -42,7 +42,7 @@ mkdir -p data/processed/event_logs
 ls data/raw/*server*.log | xargs -I {} cp {} data/processed/server_logs
 # 6. Repeat the above step for user logs and event logs
 ls data/raw/*user*.log | xargs -I {} cp {} data/processed/user_logs
-ls data/raw/*event*.log | xargs -I {} cp {} data/processed/event
+ls data/raw/*event*.log | xargs -I {} cp {} data/processed/event_logs
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 find data/raw -type f -name "*ipaddr*" -delete
 find data/processed/user_logs -type f -name "*ipaddr*" -delete
